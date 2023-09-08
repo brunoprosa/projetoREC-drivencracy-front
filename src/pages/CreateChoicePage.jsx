@@ -38,6 +38,7 @@ export default function CreateChoicePage() {
             .then(response => {
                 setChoices([...choices, response.data]);
                 setPollTitle('');
+                console.log(choices)
             })
             .catch(error => axiosErrorHandler(error, postChoiceErrorMessages));
     }
